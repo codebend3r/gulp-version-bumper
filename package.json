@@ -1,7 +1,7 @@
 {
-  "name": "ute-version-bumper",
-  "version": "0.0.1",
-  "repository": "http://totes-gitlab01.rogers.com/ute/ute-ui",
+  "name": "gulp-version-bumper",
+  "version": "0.0.2",
+  "repository": "https://github.com/crivas/gulp-version-bumper",
   "description": "will bump up version and run a git tag command",
   "main": "index.js",
   "author": "Chester Rivas",
