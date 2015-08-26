@@ -3,16 +3,20 @@ Gulp Version Bump
 
 > Goes through files and uses a regex pattern to find and replace semver version numbers according to bower.json
 
+![gulp-version-bumper build status](https://travis-ci.org/crivas/gulp-version-bumper.svg?branch=master)
+
 Example
 
-    var versionBumper = require('gulp-version-bumper');
+```js
+var versionBumper = require('gulp-version-bumper');
 
-    gulp.task('build-website', function () {
+gulp.task('build-website', function () {
 
-      return gulp.src(['app/js/**/*.js'])
-        .pipe(versionBumper({
-          version: '1.5.32'
-        }))
-        .pipe(gulp.dest('/output'));
+  return gulp.src(['app/js/**/*.js'])
+    .pipe(versionBumper({
+      version: '1.5.32'
+    }))
+    .pipe(gulp.dest('/output'));
 
-    });
+});
+```
