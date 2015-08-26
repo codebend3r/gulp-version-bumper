@@ -1,9 +1,8 @@
 Gulp Version Bump
 ====================
+![gulp-version-bumper build status](https://travis-ci.org/crivas/gulp-version-bumper.svg?branch=master)
 
 > Goes through files and uses a regex pattern to find and replace semver version numbers according to bower.json
-
-![gulp-version-bumper build status](https://travis-ci.org/crivas/gulp-version-bumper.svg?branch=master)
 
 Example
 
