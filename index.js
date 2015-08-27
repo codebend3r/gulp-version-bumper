@@ -18,7 +18,8 @@ module.exports = function (options) {
    */
   var bumpVersionInFile = function (object) {
 
-    object.toString().replace(/(\d+\.\d+\.\d+)/, function (ver) {
+    return object.toString().replace(/(\d+\.\d+\.\d+)/, function (ver) {
+      gutil.log('bump from', ver, 'to', options.version);
       return options.version;
     });
 
@@ -44,9 +45,11 @@ module.exports = function (options) {
     } else {
 
       var ctx = file.contents.toString('utf8');
-      var jsonData = bumpVersionInFile(ctx, file);
+      var bumpedFile = bumpVersionInFile(ctx);
 
-      file.contents = new Buffer(JSON.stringify(jsonData));
+      gutil.log('> bumpedFile', bumpedFile);
+
+      file.contents = new Buffer(bumpedFile);
       callback(null, file);
 
     }
