@@ -1,6 +1,6 @@
 {
   "name": "gulp-version-bumper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": "https://github.com/crivas/gulp-version-bumper",
   "description": "will bump up version and run a git tag command",
   "main": "index.js",
