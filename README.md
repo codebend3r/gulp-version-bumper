@@ -11,7 +11,7 @@ Gulp Version Bump
 
 Example
 
-```js
+```js
 var versionBumper = require('gulp-version-bumper');
 
 gulp.task('build-website', function () {

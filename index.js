@@ -19,7 +19,6 @@ module.exports = function (options) {
   var bumpVersionInFile = function (object) {
 
     return object.toString().replace(/(\d+\.\d+\.\d+)/, function (ver) {
-      gutil.log('bump from', ver, 'to', options.version);
       return options.version;
     });
 
@@ -46,8 +45,6 @@ module.exports = function (options) {
 
       var ctx = file.contents.toString('utf8');
       var bumpedFile = bumpVersionInFile(ctx);
-
-      gutil.log('> bumpedFile', bumpedFile);
 
       file.contents = new Buffer(bumpedFile);
       callback(null, file);
